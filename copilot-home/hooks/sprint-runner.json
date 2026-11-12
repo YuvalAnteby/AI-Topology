@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "node \"$HOME/.copilot/sprint-runner/bin/guard.mjs\"",
+        "powershell": "node \"$HOME\\.copilot\\sprint-runner\\bin\\guard.mjs\"",
+        "timeoutSec": 15
+      }
+    ],
+    "agentStop": [
+      {
+        "type": "command",
+        "bash": "node \"$HOME/.copilot/sprint-runner/bin/continue-sprint.mjs\"",
+        "powershell": "node \"$HOME\\.copilot\\sprint-runner\\bin\\continue-sprint.mjs\"",
+        "timeoutSec": 15
+      }
+    ]
+  }
+}

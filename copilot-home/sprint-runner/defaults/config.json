@@ -1,0 +1,58 @@
+{
+  "baseBranch": "dev",
+  "remote": "origin",
+  "sprintBranchPrefix": "sprint/",
+  "ticketBranchPrefix": "ticket/",
+  "protectedBranches": ["main", "master", "dev", "develop", "release/*"],
+
+  "prMode": "chained",
+  "pushBranches": false,
+  "handoffDir": ".sprint-runner/handoff",
+
+  "ticketSource": {
+    "type": "markdown",
+    "board": null,
+    "ticketsGlob": null,
+    "csvPath": null,
+    "csvColumns": {
+      "id": "Issue key",
+      "title": "Summary",
+      "description": "Description",
+      "status": "Status",
+      "sprint": "Sprint",
+      "dependsOn": "Inward issue link (Blocks)",
+      "estimate": "Story Points"
+    },
+    "mcpServer": null,
+    "mcpQuery": null
+  },
+  "specsDir": null,
+  "mockupsDir": null,
+
+  "testGlobs": [
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.js",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.test.js",
+    "**/*.e2e-spec.ts",
+    "**/test/**",
+    "**/tests/**",
+    "**/e2e/**",
+    "**/__tests__/**",
+    "**/__fixtures__/**",
+    "**/fixtures/**",
+    "**/golden/**"
+  ],
+
+  "checks": [],
+  "e2e": null,
+
+  "commitFormat": {
+    "red": "test({ticket}): failing tests for {title}",
+    "green": "feat({ticket}): {title}"
+  },
+
+  "maxReviewLoops": 2
+}
